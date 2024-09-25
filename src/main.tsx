@@ -1,7 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
-import App from './App.tsx'
 import './index.css'
 
 import { initializeApp } from "firebase/app";
@@ -9,6 +8,7 @@ import Login from './Login.tsx'
 import Signup from './Signup.tsx'
 import AuthRoute from './AuthRoute.tsx'
 import Admin from './Admin.tsx'
+import HomePage from './components/HomePage.tsx'
 
 const firebaseConfig = {
   apiKey: "AIzaSyBiQLIl0pbch6ujRkxsgShfXuusFPNUrm0",
@@ -24,7 +24,7 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
   <Router>
     <Routes>
-      <Route path="/" element={<App />} />
+      <Route path="/" element={<HomePage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/admin" element={<Admin />} />

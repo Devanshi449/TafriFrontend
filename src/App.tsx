@@ -50,11 +50,11 @@ function App() {
   return (
     <>
 
-    <BrowserRouter>
+    {/* <BrowserRouter>
       <Routes>
         <Route path='/' element={<HomePage/>}/>
       </Routes>
-    </BrowserRouter>
+    </BrowserRouter> */}
       {/* Display the fetched user data */}
       {/* <div>
         <h2>User Data</h2>
