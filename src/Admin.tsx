@@ -17,7 +17,7 @@ const Admin: React.FC = () => {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await axios.get('/proxy/GetUsers'); 
+                const response = await axios.get('/proxy/User/GetUsers'); // Replace with your API endpoint
                 setUsers(response.data);
             } catch (err) {
                 console.error(err);
