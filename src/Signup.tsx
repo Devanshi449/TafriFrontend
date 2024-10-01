@@ -43,8 +43,6 @@ const Signup = () => {
         setAuthing(true);
         setError('');
 
-
-
         const userData = {
             username: username,   // Including username in the payload
             email: email,

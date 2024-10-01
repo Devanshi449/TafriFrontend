@@ -7,7 +7,7 @@ import { initializeApp } from "firebase/app";
 import Login from './Login.tsx'
 import Signup from './Signup.tsx'
 import AuthRoute from './AuthRoute.tsx'
-import Admin from './Admin.tsx'
+import Admin from './components/Admin.tsx'
 import HomePage from './components/HomePage.tsx'
 
 const firebaseConfig = {
