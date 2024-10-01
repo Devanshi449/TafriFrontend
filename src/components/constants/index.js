@@ -18,10 +18,6 @@ import {
   FaListAlt,
 } from "react-icons/fa";
 
-import user01 from "../assets/user01.png";
-import user02 from "../assets/user02.png";
-import user03 from "../assets/user03.png";
-
 export const links = [
   {
     href: "#",

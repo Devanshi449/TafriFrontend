@@ -6,7 +6,7 @@ export default function Packages({ post}: any) {
         >
             <div className="w-full overflow-hidden sm:w-1/3">
                 <img
-                    src={post.packageImage}
+                     src={`../src/assets${post.packageImage}`}
                     alt={post.packageName}
                     className={`sm:group-hover:scale-hover h-48 w-full rounded-lg object-cover shadow-lg transition-transform ease-in-out sm:h-full`}
                 />
