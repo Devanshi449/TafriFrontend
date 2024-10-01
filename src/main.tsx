@@ -9,6 +9,8 @@ import Signup from './Signup.tsx'
 import AuthRoute from './AuthRoute.tsx'
 import Admin from './Admin.tsx'
 import HomePage from './components/HomePage.tsx'
+import CartPage from './components/util/cart.tsx';
+import WatchlistPage from './components/util/watchlist.tsx';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBiQLIl0pbch6ujRkxsgShfXuusFPNUrm0",
@@ -28,6 +30,8 @@ createRoot(document.getElementById('root')!).render(
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/admin" element={<Admin />} />
+      <Route path="/cart" element={<CartPage />} />  {/* Add Cart Route */}
+        <Route path="/watchlist" element={<WatchlistPage />} />  {/* Add Watchlist Route */}
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   </Router>

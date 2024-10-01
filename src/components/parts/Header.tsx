@@ -3,35 +3,26 @@ import { useNavigate } from 'react-router-dom';
 import Hero from '../util/hero';
 import { Link } from 'react-router-dom';
 import AppIcon from '../../assets/app-icon.svg'
+import { useState } from 'react';
+import Navbar from '../util/Navbar';
 
 function header() {
   const navigate = useNavigate();
+  const [open, setOpen] = useState(true);
+  const [currentRoute, setCurrentRoute] = useState("Main Dashboard");
+
+  
  
   return (
     <div className="relative -mt-2 h-[460px] bg-[url('../src/assets/wanderlustbg.webp')] bg-cover bg-fixed bg-center">
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="absolute inset-0 flex flex-col px-8 py-8 text-slate-50 sm:px-16">
         <div className="flex w-full justify-between">
-          <div className="flex cursor-text items-center justify-between gap-2 text-2xl font-semibold">
-            <Link to="/">
-              <img src={AppIcon} className="h-10 w-10" />
-            </Link>
-            <Link to="/" style={{ textDecoration: 'none' }}>
-              WanderLust
-            </Link>
-          </div>
-          <div className="flex items-center justify-between">
-            <div className="flex items-center justify-end px-4 sm:px-20">
-              <ThemeToggle />
-            </div>
-            <button
-              className="active:scale-click hidden rounded border border-slate-50 px-4 py-2 hover:bg-slate-500/25 md:inline-block"
-              onClick={() => {
-                navigate('/signin');
-              }}
-            >
-              Login
-            </button>
+        <Navbar
+          onOpenSidenav={() => setOpen(true)}
+           brandText={currentRoute}
+ 
+           />
             {/* <div>
               {loading ? (
                 <Loader />
@@ -107,7 +98,7 @@ function header() {
         </div>
         <Hero />
       </div>
-    </div>
+    
   );
 }
 
